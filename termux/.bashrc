@@ -3,7 +3,6 @@ alias addshortcut="cd ~/.shortcuts"
 alias req="pip install -r requirements.txt"
 alias pyfiles="cd ~/storage/shared/python"
 alias src="source ~/.bashrc"
-alias safe="git config --global --add safe.directory $PWD"
 alias streak="cd ~/storage/shared/python/github-streak; bash increment_counter.sh"
 
 
@@ -111,6 +110,10 @@ function info() {
 
 function clone() {
 	git clone https://github.com/alexlostorto/$1.git
+}
+
+function safe {
+	git config --global --add safe.directory /storage/emulated/0/python/$1
 }
 
 
